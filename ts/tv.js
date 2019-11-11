@@ -10,3 +10,4 @@ var TV = /** @class */ (function () {
 exports.TV = TV;
 var tv = new TV();
 tv.remote.turnOn();
+tv.remote.turnOff();

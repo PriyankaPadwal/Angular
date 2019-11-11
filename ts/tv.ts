@@ -11,3 +11,4 @@ export class TV{
 
 let tv=new TV()
 tv.remote.turnOn();
+tv.remote.turnOff();
