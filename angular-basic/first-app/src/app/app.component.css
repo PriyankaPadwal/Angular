@@ -1,6 +1,11 @@
-h1{
-    color: blue;
-    text-align: center;
-    font-size: 3rem;
-    
+.navbar {
+	margin-bottom: 0;
+    width: 100%;
+    background:black;
+}
+.nav-link {
+    color: white;
+    font-size: 25px;
+    padding-right: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
