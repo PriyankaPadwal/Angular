@@ -273,6 +273,124 @@
           }
         }
       }
+    },
+    "google-index-page": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/google-index-page",
+      "sourceRoot": "projects/google-index-page/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/google-index-page",
+            "index": "projects/google-index-page/src/index.html",
+            "main": "projects/google-index-page/src/main.ts",
+            "polyfills": "projects/google-index-page/src/polyfills.ts",
+            "tsConfig": "projects/google-index-page/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/google-index-page/src/favicon.ico",
+              "projects/google-index-page/src/assets"
+            ],
+            "styles": [
+              "projects/google-index-page/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/google-index-page/src/environments/environment.ts",
+                  "with": "projects/google-index-page/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "google-index-page:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "google-index-page:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "google-index-page:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/google-index-page/src/test.ts",
+            "polyfills": "projects/google-index-page/src/polyfills.ts",
+            "tsConfig": "projects/google-index-page/tsconfig.spec.json",
+            "karmaConfig": "projects/google-index-page/karma.conf.js",
+            "assets": [
+              "projects/google-index-page/src/favicon.ico",
+              "projects/google-index-page/src/assets"
+            ],
+            "styles": [
+              "projects/google-index-page/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/google-index-page/tsconfig.app.json",
+              "projects/google-index-page/tsconfig.spec.json",
+              "projects/google-index-page/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/google-index-page/e2e/protractor.conf.js",
+            "devServerTarget": "google-index-page:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "google-index-page:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "first-app"
 }
