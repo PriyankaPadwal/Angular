@@ -25,7 +25,9 @@ export class DbRandomComponent implements OnInit {
   let red=Math.floor(Math.random()*256);   
   let green=Math.floor(Math.random()*256);   
   let blue=Math.floor(Math.random()*256);   
+
   console.log("red-"+red,"green-"+green,"blue-"+blue);
+  
     return `rgb(${red},${green},${blue})`
   }
 
