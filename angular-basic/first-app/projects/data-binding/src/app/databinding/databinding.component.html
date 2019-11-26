@@ -1,0 +1,67 @@
+<!-- interpolation binding -->
+<div class="row">
+<div class="col-md-12">
+<p class="text-muted"><strong>Interpolation</strong> (value of myNm is) {{myNm}}</p>
+</div>
+</div>
+
+<div class="row mb-2">
+    <div class="col-md-12">
+   <input type="{{typ}}"> 
+    </div>
+    </div>
+
+<!--property binding-->  
+<div class="row mb-2">
+    <div class="col-md-12">
+   <input [type]="typ"> 
+    </div>
+    </div>
+    <!-- -style property -->
+    <div class="row">
+        <div class="col-md-12">
+        <p [style.border]="'1px solid red'">This is codekul</p>  
+        </div>
+        </div>
+
+    <!-- -class property
+    <div class="row">
+        <div class="col-md-12">
+        <p [class.alert]="true" [class.alert.info]="true">class property</p>  
+        </div>
+        </div> -->
+
+     <!--event -->
+         <div class="row">
+        <div class="col-md-12">
+         <input (click)="myClk($event)"  class="btn btn-primary" type="button" value="submit">
+        </div>
+        </div> 
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <input (keyup)="myClk($event)" type="text" placeholder="ghost">
+            </div>
+            </div>  
+
+
+            <!-- <div class="row mt-2">
+                    <div class="col-md-12">
+                            <input type="button" (click)="onClk()"  value="set">
+                        <input  type="text" id="txt1" name="txt1" placeholder="afdg">
+                       
+                    </div>
+                    </div>  
+         -->
+
+
+
+
+
+
+
+
+
+
+
+
