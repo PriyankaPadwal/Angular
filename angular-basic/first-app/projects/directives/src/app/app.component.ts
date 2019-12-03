@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+isPara=false  
   title = 'directives';
+  onClick(evt:any){
+   this.isPara=!this.isPara
+   console.log(evt);
+  }
 }
