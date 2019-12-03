@@ -1,0 +1,31 @@
+<div class="calculator card">
+
+    <input type="text" class="calculator-screen z-depth-1" value="{{ subText }}"  disabled/>
+    <input type="text" id="txt2" class="calculator-screen z-depth-1" value="{{ mainText }}"  autofocus="autofocus" disabled/>  
+   
+   <div class="calculator-keys">
+     <button type="button" class="operator btn btn-info"  (click)="pressKey('+')" >+</button>
+     <button type="button" class="operator btn btn-info"  (click)="pressKey('-')">-</button>
+     <button type="button" class="operator btn btn-info" (click)="pressKey('x')">&times;</button>
+     <button type="button" class="operator btn btn-info"  (click)="pressKey('/')">&divide;</button>
+ 
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('7')">7</button>
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('8')">8</button>
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('9')">9</button>
+ 
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('4')">4</button>
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('5')">5</button>
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('6')">6</button>
+ 
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('1')">1</button>
+     <button type="button" class="btn btn-light waves-effect" (click)="pressKey('2')">2</button>
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('3')">3</button>
+ 
+     <button type="button"  class="btn btn-light waves-effect" (click)="pressKey('0')">0</button>
+     <button type="button" class="decimal function btn btn-secondary" (click)="pressKey('.')">.</button>
+     <button type="button" class="all-clear function btn btn-danger btn-sm" (click)="allClear()" value="all-clear">AC</button>
+ 
+     <button type="button" class="equal-sign operator btn btn-info" (click)="getAnswer()"value="=" >=</button>
+ 
+   </div>
+ </div>
