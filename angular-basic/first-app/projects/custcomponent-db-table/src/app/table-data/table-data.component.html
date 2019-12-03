@@ -10,16 +10,15 @@
         </tr>
     </thead>
     <tbody>
-        <!--  dynamic data -->
-        <tr *ngFor="let row of rows">
+        <!-- dynamic data
+        *ngFor structural directives
+        -->
+        <tr *ngFor="let row of rows">   
                 <th scope="row">{{row?.id}}</th>
                 <td>{{row?.item}}</td>
                 <td>{{row?.qty}}</td>
                 <td>{{row?.price}}</td>
                 <td><a href="#" (click)="onDeleteRow(row)"><i class="fa fa-trash-o" aria-hidden="true"></i> </a></td>
             </tr>
-        
-
-  
     </tbody>
 </table>
