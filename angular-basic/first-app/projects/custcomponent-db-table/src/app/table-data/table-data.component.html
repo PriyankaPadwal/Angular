@@ -10,14 +10,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">{{rows[0]?.id}}</th>
-            <td>{{rows[0]?.item}}</td>
-            <td>{{rows[0]?.qty}}</td>
-            <td>{{rows[0]?.price}}</td>
-            <td><a href="#" (click)="onDeleteRow(rows[0])"><i class="fa fa-trash-o" aria-hidden="true"></i> </a></td>
+
+        <!--  dynamic data -->
+        <tr *ngFor="let row of rows">
+            <th scope="row">{{row?.id}}</th>
+            <td>{{row?.item}}</td>
+            <td>{{row?.qty}}</td>
+            <td>{{row?.price}}</td>
+            <td><a href="#" (click)="onDeleteRow(row)"><i class="fa fa-trash-o" aria-hidden="true"></i> </a></td>
         </tr>
-        <tr>
+
+  <!--static data -->
+        <!-- <tr>
                 <th scope="row">{{rows[1]?.id}}</th>
                 <td>{{rows[1]?.item}}</td>
                 <td>{{rows[1]?.qty}}</td>
@@ -37,6 +41,6 @@
                 <td>{{rows[3]?.qty}}</td>
                 <td>{{rows[3]?.price}}</td>
                 <td><a href="#" (click)="onDeleteRow(rows[3])"><i class="fa fa-trash-o" aria-hidden="true"></i> </a></td>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
