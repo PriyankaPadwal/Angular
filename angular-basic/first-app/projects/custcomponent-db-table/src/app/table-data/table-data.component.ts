@@ -24,4 +24,8 @@ export class TableDataComponent implements OnInit {
  this.deleteRow.emit(row);
   }
 
+  getData(){
+    
+  }
+
 }
