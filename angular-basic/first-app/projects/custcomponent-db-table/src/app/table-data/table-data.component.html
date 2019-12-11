@@ -1,5 +1,5 @@
 <h3>Table</h3>
-<table class="table table-bordered table-striped mt-4">
+<table class="table table-bordered table-striped mt-4"  >
     <thead>
         <tr>
             <th scope="col">Id</th>
@@ -9,14 +9,15 @@
             <th scope="col">Action</th>
         </tr>
         <tr>
-                <th scope="col"><input type="text" name="" id="" (keyup)="getData()"></th>
-                <th scope="col"><input type="text" name="" id="" (keyup)="getData()"></th>
-                <th scope="col"><input type="text" name="" id="" (keyup)="getData()"></th>
-                <th scope="col"><input type="text" name="" id="" (keyup)="getData()"></th>
-                <th scope="col"><input type="button" value="Add" class="btn btn-info"></th>
+                <th scope="col"><input type="text" name="" id="" #txtid></th>
+                <th scope="col"><input type="text" name="" id="" #txtitem></th>
+                <th scope="col"><input type="text" name="" id="" #txtqty></th>
+                <th scope="col"><input type="text" name="" id=""#txtprice></th>
+                
+                <th scope="col"><input type="button" value="Add" (click)="addData()"></th>
             </tr>
     </thead>
-    <tbody>
+    <tbody> 
         <!-- dynamic data
         *ngFor structural directives
         -->

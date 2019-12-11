@@ -7,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./item-info.component.css']
 })
 export class ItemInfoComponent implements OnInit {
-
-  constructor() { }
   @Input()
   row:TabRow
+  
+  constructor() { }
+  
   ngOnInit() {
   }
 

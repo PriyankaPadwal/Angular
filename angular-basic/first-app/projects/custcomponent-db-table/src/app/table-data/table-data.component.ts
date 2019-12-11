@@ -1,5 +1,5 @@
 import { TabRow } from './../data-domain';
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 
 @Component({
@@ -11,12 +11,28 @@ export class TableDataComponent implements OnInit {
  
  @Input()
   rows: Array<TabRow>=new Array()
+
+  addObj:TabRow
+
+  @Output()
+   addArrayElt = new EventEmitter<TabRow>();
+
+  @ViewChild('txtid',{static:false}) 
+  txtid: ElementRef;
+  @ViewChild('txtitem',{static:false}) 
+  txtitem: ElementRef;
+  @ViewChild('txtqty',{static:false})
+  txtqty: ElementRef;
+   @ViewChild('txtprice',{static:false})
+   txtprice: ElementRef;
   
   @Output('delete')
   deleteRow :EventEmitter<TabRow>=new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
+   
   }
 
   onDeleteRow(row:TabRow){
@@ -24,8 +40,16 @@ export class TableDataComponent implements OnInit {
  this.deleteRow.emit(row);
   }
 
-  getData(){
-    
-  }
+ 
 
+  addData(){ 
+    //console.log(this.txtid.nativeElement.value,'...........milali value');
+  this.addObj=({
+  id:parseInt(this.txtid.nativeElement.value),
+  item:this.txtitem.nativeElement.value,
+  qty:parseInt(this.txtqty.nativeElement.value),
+  price:parseInt(this.txtprice.nativeElement.value)
+  })
+  this.addArrayElt.emit(this.addObj);
+  }
 }

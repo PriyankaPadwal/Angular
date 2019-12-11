@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-table-data [rows]="data" (delete)="ondelete($event)"></app-table-data>
+      <app-table-data [rows]="data" (delete)="ondelete($event)" (addArrayElt)="addArray($event)"></app-table-data>
     </div>
   </div>
-
+  
   <div class="row mt-3">
       <input type="button" value="Fetch Data" class="btn btn-info" (click)="fetchData()">
     </div>
